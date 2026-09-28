@@ -36,7 +36,7 @@ export default function EngineeringEntry() {
         viewport={{ once: false, amount: 0.3 }}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/owner/image%20copy.png')",
+          backgroundImage: "url('/images/owner/image%20copy.webp')",
         }}
       />
 

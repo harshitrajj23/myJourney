@@ -34,6 +34,7 @@ export default function InteractiveWaterBackground() {
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover opacity-80"
         src="/animations/wtaerbg.mp4"
       />

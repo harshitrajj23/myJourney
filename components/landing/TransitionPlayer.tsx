@@ -38,7 +38,7 @@ export default function TransitionPlayer() {
         src="/animations/loop.mp4"
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
       />
 
       {/* Fade to black overlay */}

@@ -1,73 +1,73 @@
 export const imageMap: Record<string, string[]> = {
   "bmsce": [
-    "/images/bmsce/image%20copy.png",
-    "/images/bmsce/image.png"
+    "/images/bmsce/image%20copy.webp",
+    "/images/bmsce/image.webp"
   ],
   "buildAndConquer": [
-    "/images/buildAndConquer/image%20copy%202.png",
-    "/images/buildAndConquer/image%20copy.png",
-    "/images/buildAndConquer/image.png"
+    "/images/buildAndConquer/image%20copy%202.webp",
+    "/images/buildAndConquer/image%20copy.webp",
+    "/images/buildAndConquer/image.webp"
   ],
   "buildforBengaluru": [
-    "/images/buildforBengaluru/image%20copy%202.png",
-    "/images/buildforBengaluru/image%20copy.png",
-    "/images/buildforBengaluru/image.png"
+    "/images/buildforBengaluru/image%20copy%202.webp",
+    "/images/buildforBengaluru/image%20copy.webp",
+    "/images/buildforBengaluru/image.webp"
   ],
   "cloudathon": [
-    "/images/cloudathon/image%20copy%202.png",
-    "/images/cloudathon/image%20copy.png",
-    "/images/cloudathon/image.png"
+    "/images/cloudathon/image%20copy%202.webp",
+    "/images/cloudathon/image%20copy.webp",
+    "/images/cloudathon/image.webp"
   ],
   "fest": [
-    "/images/fest/image%20copy%202.png",
-    "/images/fest/image%20copy.png",
-    "/images/fest/image.png"
+    "/images/fest/image%20copy%202.webp",
+    "/images/fest/image%20copy.webp",
+    "/images/fest/image.webp"
   ],
   "friendship": [
-    "/images/friendship/image%20copy%202.png",
-    "/images/friendship/image%20copy%203.png",
-    "/images/friendship/image%20copy%204.png",
-    "/images/friendship/image%20copy%205.png",
-    "/images/friendship/image%20copy.png",
-    "/images/friendship/image.png"
+    "/images/friendship/image%20copy%202.webp",
+    "/images/friendship/image%20copy%203.webp",
+    "/images/friendship/image%20copy%204.webp",
+    "/images/friendship/image%20copy%205.webp",
+    "/images/friendship/image%20copy.webp",
+    "/images/friendship/image.webp"
   ],
   "incseption": [
-    "/images/incseption/image%20copy%202.png",
-    "/images/incseption/image%20copy.png",
-    "/images/incseption/image.png"
+    "/images/incseption/image%20copy%202.webp",
+    "/images/incseption/image%20copy.webp",
+    "/images/incseption/image.webp"
   ],
   "nakshatra": [
-    "/images/nakshatra/image%20copy%202.png",
-    "/images/nakshatra/image%20copy.png",
-    "/images/nakshatra/image.png"
+    "/images/nakshatra/image%20copy%202.webp",
+    "/images/nakshatra/image%20copy.webp",
+    "/images/nakshatra/image.webp"
   ],
   "overclock": [
-    "/images/overclock/image%20copy%202.png",
-    "/images/overclock/image%20copy.png",
-    "/images/overclock/image.png"
+    "/images/overclock/image%20copy%202.webp",
+    "/images/overclock/image%20copy.webp",
+    "/images/overclock/image.webp"
   ],
   "owner": [
-    "/images/owner/image%20copy.png",
-    "/images/owner/image.png"
+    "/images/owner/image%20copy.webp",
+    "/images/owner/image.webp"
   ],
   "pushPull": [
-    "/images/pushPull/image%20copy.png",
-    "/images/pushPull/image.png"
+    "/images/pushPull/image%20copy.webp",
+    "/images/pushPull/image.webp"
   ],
   "syntaxAndStakes": [
-    "/images/syntaxAndStakes/image%20copy%202.png",
-    "/images/syntaxAndStakes/image%20copy.png",
-    "/images/syntaxAndStakes/image.png"
+    "/images/syntaxAndStakes/image%20copy%202.webp",
+    "/images/syntaxAndStakes/image%20copy.webp",
+    "/images/syntaxAndStakes/image.webp"
   ],
   "trips": [
-    "/images/trips/image%20copy%202.png",
-    "/images/trips/image%20copy%203.png",
-    "/images/trips/image%20copy%204.png",
-    "/images/trips/image%20copy.png",
-    "/images/trips/image.png"
+    "/images/trips/image%20copy%202.webp",
+    "/images/trips/image%20copy%203.webp",
+    "/images/trips/image%20copy%204.webp",
+    "/images/trips/image%20copy.webp",
+    "/images/trips/image.webp"
   ],
   "triverse": [
-    "/images/triverse/image%20copy.png",
-    "/images/triverse/image.png"
+    "/images/triverse/image%20copy.webp",
+    "/images/triverse/image.webp"
   ]
 };

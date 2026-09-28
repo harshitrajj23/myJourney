@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CinematicGalleryProps {
@@ -49,15 +50,18 @@ export default function CinematicGallery({ images, alt }: CinematicGalleryProps)
           >
             {/* Blurred background plate for non-filling images to prevent harsh black bars */}
             <div 
-              className="absolute inset-0 bg-cover bg-center blur-2xl opacity-40 scale-110"
+              className="absolute inset-0 bg-cover bg-center blur-2xl opacity-40 scale-110 pointer-events-none"
               style={{ backgroundImage: `url('${src}')` }}
             />
             
-            {/* The actual image using object-contain to never crop faces/certificates */}
-            <motion.img
+            {/* The actual image using Next.js Image with lazy loading & responsive sizing */}
+            <Image
               src={src}
               alt={`${alt} memory ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-contain p-2 drop-shadow-2xl z-10 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+              className="object-contain p-2 drop-shadow-2xl z-10 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
             
             {/* View More Overlay (only on the 2nd image if there are more) */}
@@ -123,14 +127,13 @@ export default function CinematicGallery({ images, alt }: CinematicGalleryProps)
               layoutId={`gallery-image-${images[selectedImageIndex]}`}
               className="relative z-40 w-full max-w-7xl h-[80vh] flex items-center justify-center px-4 md:px-24"
             >
-              <motion.img
+              <Image
                 src={images[selectedImageIndex]}
                 alt={`${alt} expanded`}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full h-full object-contain drop-shadow-[0_0_100px_rgba(0,0,0,0.8)]"
+                fill
+                priority
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                className="object-contain drop-shadow-[0_0_100px_rgba(0,0,0,0.8)]"
               />
             </motion.div>
             

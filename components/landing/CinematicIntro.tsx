@@ -29,7 +29,7 @@ export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
       />
 
       {/* Dark Overlay */}

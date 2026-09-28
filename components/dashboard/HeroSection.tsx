@@ -76,6 +76,7 @@ export default function HeroSection() {
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
         <div
@@ -189,7 +190,7 @@ export default function HeroSection() {
                 }}
               >
                 <Image
-                  src="/images/owner/image.png"
+                  src="/images/owner/image.webp"
                   alt="Harshit Raj"
                   fill
                   sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
