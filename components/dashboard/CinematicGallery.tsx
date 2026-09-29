@@ -12,7 +12,65 @@ interface CinematicGalleryProps {
 export default function CinematicGallery({ images, alt }: CinematicGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  if (!images || images.length === 0) return null;
+  if (!images || images.length === 0) {
+    return (
+      <div className="w-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="relative w-full aspect-video md:aspect-[4/3] lg:aspect-video rounded-3xl overflow-hidden bg-white/[0.02] border border-white/10 shadow-2xl shadow-black/50 p-8 flex flex-col items-center justify-center text-center backdrop-blur-xl group hover:border-cyan-500/30 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] transition-all duration-500"
+        >
+          {/* Subtle Cyber Grid & Ambient Radial Glow */}
+          <div 
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
+            style={{
+              backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+              backgroundSize: "24px 24px"
+            }}
+          />
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 70%)"
+            }}
+          />
+
+          {/* Tech icon */}
+          <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:border-cyan-500/40 group-hover:bg-cyan-500/10 transition-all duration-500 shadow-[0_0_25px_rgba(0,0,0,0.5)]">
+            <svg 
+              className="w-8 h-8 text-white/40 group-hover:text-cyan-300 transition-colors duration-500" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+
+          {/* Typography */}
+          <div className="relative z-10 space-y-2 max-w-sm">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[10px] uppercase font-mono tracking-widest text-cyan-300/90">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              Visual Showcase
+            </span>
+            <h4 className="text-white/80 font-medium text-base tracking-tight pt-1">
+              {alt}
+            </h4>
+            <p className="text-xs text-white/40 leading-relaxed font-light">
+              Production architecture shipped. Visual gallery artifacts pending sync.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   // Rule: Display maximum 2 images on the main slide.
   const displayImages = images.slice(0, 2);

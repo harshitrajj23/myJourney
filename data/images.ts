@@ -69,5 +69,37 @@ export const imageMap: Record<string, string[]> = {
   "triverse": [
     "/images/triverse/image%20copy.webp",
     "/images/triverse/image.webp"
+  ],
+  "mediAi": [
+    "/images/mediAi/image.webp",
+    "/images/mediAi/image%20copy.webp"
+  ],
+  "neuroadapt": [
+    "/images/neuroadapt/image.webp",
+    "/images/neuroadapt/image%20copy.webp",
+    "/images/neuroadapt/image%20copy%202.webp",
+    "/images/neuroadapt/image%20copy%203.webp"
+  ],
+  "palsClub": [
+    "/images/palsClub/image.webp",
+    "/images/palsClub/image%20copy.webp",
+    "/images/palsClub/image%20copy%202.webp"
+  ],
+  "voiceRag": [
+    "/images/voiceRag/image.webp",
+    "/images/voiceRag/image%20copy.webp"
+  ],
+  "faceDetector": [
+    "/images/faceDetector/image.webp",
+    "/images/faceDetector/image%20copy.webp"
+  ],
+  "vyntra": [
+    "/images/vyntra/image.webp",
+    "/images/vyntra/image%20copy.webp",
+    "/images/vyntra/image%20copy%202.webp"
+  ],
+  "juryWebsite": [
+    "/images/juryWebsite/image.webp",
+    "/images/juryWebsite/image%20copy.webp"
   ]
 };

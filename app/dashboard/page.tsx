@@ -75,7 +75,7 @@ export default function DashboardPage() {
                 href="/beyond-studies"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 hover:border-cyan-400/60 hover:from-cyan-500/20 hover:to-purple-500/20 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500 text-cyan-300 hover:text-cyan-100 font-medium"
               >
-                What I did apart from studies →
+                Beyond Studies →
               </Link>
             </div>
           </div>
