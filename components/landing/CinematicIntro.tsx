@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import EnterButton from "./EnterButton";
 
@@ -9,39 +8,40 @@ interface CinematicIntroProps {
 }
 
 export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay blocked — video will show first frame
-      });
-    }
-  }, []);
-
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center">
-      {/* Cinematic Background Video */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/animations/journeybg.mp4"
-        poster="/images/owner/image.webp"
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-[1]" />
+    <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden bg-[#050507]">
+      {/* Ambient Radial Glowing Orbs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-[140px] opacity-40 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(6, 182, 212, 0.15) 50%, transparent 75%)",
+          }}
+        />
+        <div
+          className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full blur-[120px] opacity-25 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(168, 85, 247, 0.1) 60%, transparent 80%)",
+          }}
+        />
+        {/* Subtle dot matrix grid */}
+        <div
+          className="absolute inset-0 opacity-[0.07] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.6) 1px, transparent 0)`,
+            backgroundSize: "36px 36px",
+          }}
+        />
+      </div>
 
       {/* Vignette Effect */}
       <div
-        className="absolute inset-0 z-[2]"
+        className="absolute inset-0 z-[2] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%)",
+            "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.85) 100%)",
         }}
       />
 
@@ -49,7 +49,7 @@ export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-8">
         {/* Subtle top label */}
         <div className="absolute top-8 left-1/2 -translate-x-1/2">
-          <p className="text-xs tracking-[0.3em] uppercase text-white/30 font-mono">
+          <p className="text-xs tracking-[0.3em] uppercase text-white/40 font-mono">
             The Journey of
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
         <AnimatedTitle />
 
         {/* Tagline */}
-        <p className="text-sm md:text-base text-white/40 max-w-md font-light tracking-wide mt-4">
+        <p className="text-sm md:text-base text-white/50 max-w-md font-light tracking-wide mt-4">
           An immersive journey through code, hackathons, and building under
           pressure.
         </p>
@@ -76,7 +76,7 @@ export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-[3]" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050507] to-transparent z-[3] pointer-events-none" />
     </div>
   );
 }
