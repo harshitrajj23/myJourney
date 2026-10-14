@@ -20,10 +20,13 @@
    BASE RESETS & VIEWPORT STYLES
    ======================================== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Keep resets below Tailwind utilities so p-*, m-* and space-* can win. */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 html {

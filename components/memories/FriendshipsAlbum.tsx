@@ -98,6 +98,7 @@ export default function FriendshipsAlbum({ onImageClick }: FriendshipsAlbumProps
                 src={images[0]} 
                 alt="Friendship Hero" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 850px"
                 className="object-cover scale-110" 
               />
               <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -113,6 +114,7 @@ export default function FriendshipsAlbum({ onImageClick }: FriendshipsAlbumProps
                 src={images[1]} 
                 alt="Friendship Supporting 1" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
                 className="object-cover scale-110" 
               />
               <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -129,6 +131,7 @@ export default function FriendshipsAlbum({ onImageClick }: FriendshipsAlbumProps
                 src={images[2]} 
                 alt="Friendship Supporting 2" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 42vw, 530px"
                 className="object-cover scale-110" 
               />
               <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -144,6 +147,7 @@ export default function FriendshipsAlbum({ onImageClick }: FriendshipsAlbumProps
                 src={images[3]} 
                 alt="Friendship Supporting 3" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px"
                 className="object-cover scale-110" 
               />
               <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />

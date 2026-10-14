@@ -101,6 +101,7 @@ export default function FestsAlbum({ onImageClick }: FestsAlbumProps) {
                 src={images[0]} 
                 alt="Fest Hero" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 1280px"
                 className="object-cover scale-110" 
               />
               <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -118,6 +119,7 @@ export default function FestsAlbum({ onImageClick }: FestsAlbumProps) {
                   src={images[1]} 
                   alt="Fest Supporting 1" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
                   className="object-cover scale-110" 
                 />
                 <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -133,6 +135,7 @@ export default function FestsAlbum({ onImageClick }: FestsAlbumProps) {
                   src={images[2]} 
                   alt="Fest Supporting 2" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
                   className="object-cover scale-110" 
                 />
                 <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -148,6 +151,7 @@ export default function FestsAlbum({ onImageClick }: FestsAlbumProps) {
                   src={images[3]} 
                   alt="Fest Supporting 3" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 420px"
                   className="object-cover scale-110" 
                 />
                 <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />

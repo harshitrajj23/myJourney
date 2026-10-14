@@ -95,6 +95,7 @@ export default function CinematicLightbox({ isOpen, images, initialIndex, onClos
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              decoding="async"
               className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(0,0,0,0.8)]"
             />
           </motion.div>

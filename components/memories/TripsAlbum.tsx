@@ -94,6 +94,7 @@ export default function TripsAlbum({ onImageClick }: TripsAlbumProps) {
                 src={images[0]} 
                 alt="Trip Hero" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 1280px"
                 className="object-cover scale-110" 
                 priority
               />
@@ -112,6 +113,7 @@ export default function TripsAlbum({ onImageClick }: TripsAlbumProps) {
                   src={images[1]} 
                   alt="Trip Supporting 1" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 42vw, 530px"
                   className="object-cover scale-110" 
                 />
                 <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -128,6 +130,7 @@ export default function TripsAlbum({ onImageClick }: TripsAlbumProps) {
                     src={images[2]} 
                     alt="Trip Supporting 2" 
                     fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 58vw, 720px"
                     className="object-cover scale-110" 
                   />
                   <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />
@@ -142,6 +145,7 @@ export default function TripsAlbum({ onImageClick }: TripsAlbumProps) {
                     src={images[3]} 
                     alt="Trip Supporting 3" 
                     fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 540px"
                     className="object-cover scale-110" 
                   />
                   <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-transparent" />

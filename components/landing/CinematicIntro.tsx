@@ -26,6 +26,7 @@ export default function CinematicIntro({ onEnter }: CinematicIntroProps) {
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src="/animations/journeybg.mp4"
+        poster="/images/owner/image.webp"
         muted
         loop
         playsInline

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export default function AlbumHero() {
   return (
@@ -9,7 +8,7 @@ export default function AlbumHero() {
       {/* Subtle Grain Overlay */}
       <div 
         className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay z-10"
-        style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }}
+        style={{ backgroundImage: `url('/noise.svg')` }}
       />
       
       {/* Ambient Lighting Layers */}

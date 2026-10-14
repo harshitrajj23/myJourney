@@ -1,12 +1,11 @@
-import CursorGlow from "@/components/ui/CursorGlow";
-import ScrollProgress from "@/components/ui/ScrollProgress";
-import LenisProvider from "@/components/providers/LenisProvider";
 import type { Metadata } from "next";
+import styles from "./dashboard.module.css";
+import JourneyExperience from "@/components/dashboard/JourneyExperience";
 
 export const metadata: Metadata = {
   title: "Dashboard — Harshit Raj's Journey",
   description:
-    "Explore the cinematic journey of Harshit Raj through hackathons, projects, and real-world building under pressure.",
+    "A personal record of Harshit Raj’s engineering journey: first principles, hackathons, and projects built along the way.",
 };
 
 export default function DashboardLayout({
@@ -15,12 +14,6 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <LenisProvider>
-      <CursorGlow />
-      <ScrollProgress />
-      <main className="relative bg-[#050507] text-white">
-        {children}
-      </main>
-    </LenisProvider>
+    <JourneyExperience className={styles.root}>{children}</JourneyExperience>
   );
 }

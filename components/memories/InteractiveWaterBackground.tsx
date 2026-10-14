@@ -8,23 +8,34 @@ export default function InteractiveWaterBackground() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    let rafId: number | null = null;
+
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-      if (!isHovering) setIsHovering(true);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        setMousePos({ x: e.clientX, y: e.clientY });
+        setIsHovering(true);
+        rafId = null;
+      });
     };
 
     const handleMouseLeave = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
       setIsHovering(false);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    document.body.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    document.body.addEventListener("mouseleave", handleMouseLeave, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       document.body.removeEventListener("mouseleave", handleMouseLeave);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
-  }, [isHovering]);
+  }, []);
 
   return (
     <div className="fixed inset-0 z-0 w-full h-full overflow-hidden pointer-events-none">
@@ -35,6 +46,7 @@ export default function InteractiveWaterBackground() {
         muted
         playsInline
         preload="metadata"
+        poster="/images/trips/image.webp"
         className="absolute inset-0 w-full h-full object-cover opacity-80"
         src="/animations/wtaerbg.mp4"
       />
